@@ -1,0 +1,22 @@
+ion-footer {
+    form {
+        display: flex;
+        align-items: center;
+    }
+
+    ion-icon {
+        background: #23ac9f;
+        color: white;
+        padding: 9px 10px;
+        border-radius: 50%;
+    }
+}
+
+.msg-list{
+    span{
+        background: #eeeebd;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-bottom: 7px;
+    }
+}

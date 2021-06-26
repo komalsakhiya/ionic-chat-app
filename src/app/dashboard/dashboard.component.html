@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>
+          Home
+      </ion-title>
+      <div slot="end" (click)="logOut()">
+        <ion-icon name="log-out-outline" style="font-size: 30px;"></ion-icon>
+      </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="allUser.length">
+    <ion-list>
+      <ion-item *ngFor="let  user of allUser" (click)="goToChat(user)" >
+        <ion-label>{{user.userName}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="!loading && !allUser.length" class="no-data">
+    No user found!
+  </div>
+  <div *ngIf="loading" class="no-data">
+    <ion-spinner></ion-spinner>
+  </div>
+</ion-content>
